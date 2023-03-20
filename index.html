@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Felicidades Cesiah</title>
+</head>
+<body>
+    <div id="centro">
+        <div id="paso1" class="paso">
+            <audio controls autoplay id="audio">
+                <source src="./assets/mananitas.mp3">
+            </audio>
+            <span id="flecha">↑</span><br/>
+            <h3>Dale play al audio</h3>
+        </div>
+        <div id="paso2" class="paso">
+            <img src="./assets/felicitacion.jpg">
+        </div>
+        <div id="paso3" class="paso">
+            <h2>Muchas felicidades Cesiah</h2>
+            <p>
+                Esqpero que este día y los que vienen te la pases bien. un año de más de vida, 
+                hay que agradecer que esto fue posible por que nunca sabemos cuando no podremos 
+                celebrar el proximo, o al menos yo lo agradezco. Espero que todos tus seres queridos sean bendecidos 
+                y que los puedas disfrutar al máximo. 
+            </p>
+            <button>Siguiente</button>
+        </div>
+        <div id="paso4" class="paso">
+            <h2>Muchas felicidades Cesiah</h2>
+            <p>
+                De mi lado quiero agarrar tu cumpleaños 
+                de pretexto para darte un agradecimiento muy especial,
+                <b>Gracias por ser como eres</b>, de manera directa o indirecta me has ayudado mucho 
+                , aprecio los detalles que has hecho por mi, gracias por 
+                 hablar o jugar conmigo de la forma en la que lo hago a lo largo del tiempo
+                siento que siempre te has adaptado a mi y eso lo valoro mucho.Siento que otra persona ya se
+                hubiera ido.
+            </p>
+            <button>Siguiente</button>
+        </div>
+        <div id="paso5" class="paso">
+            <h2>Muchas felicidades Cesiah</h2>
+            <p>
+               Nunca me imagine que alguien que empezo como un 
+                contacto de messenger fuera a tomar relevancia en mi vida si me lo hubieran dicho
+                hace 15 años nunca les hubiera creido a tal grado que no se como decirlo pero por momentos me da miedo
+                hecharlo a perder y perderte, no lo digo de manera romantica lo digo de manera de perder a la persona.
+                Te quiero mucho Cesiah y espero poder apoyarte y estar para ti en los momentos mas duros
+                o en los que me llegues a necesitar.
+            </p>
+            <button>Siguiente</button>
+        </div>
+        <div id="paso6" class="paso">
+            <h3>Mi regalo de mi parte:</h3>
+            <img src="./assets/rosa.jpg">
+            <button>Siguiente</button>
+        </div>
+        <div id="paso7" class="paso">
+            <h3>Fin</h3>
+        </div>
+    </div>
+
+    <img src="./assets/fondo.jpg" id="fondo" alt="" >
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script>
+
+
+    $( document ).ready(function() {
+        $("#paso2").fadeOut(0)
+        $("#paso3").fadeOut(0)
+        $("#paso4").fadeOut(0)
+        $("#paso5").fadeOut(0)
+        $("#paso6").fadeOut(0)
+        $("#paso7").fadeOut(0)
+        $("#audio").on("play",function(){
+          
+            $("#paso1").fadeOut(1000);
+            $("#paso2").delay(1001).fadeIn(500)
+            $("#paso2").delay(1500).fadeOut(1000)
+            $("#paso3").delay(3500).fadeIn(1000)
+
+            $("#paso3 button").click(function(){
+                $("#paso3").fadeOut(500)
+                $("#paso4").fadeIn(1000)
+            })
+
+            $("#paso4 button").click(function(){
+                $("#paso4").fadeOut(500)
+                $("#paso5").fadeIn(1000)
+            })
+
+            $("#paso5 button").click(function(){
+                $("#paso5").fadeOut(500)
+                $("#paso6").fadeIn(1000)
+            })
+
+            $("#paso6 button").click(function(){
+                $("#paso6").fadeOut(500)
+                $("#paso7").fadeIn(1000)
+            })
+
+        })
+        
+    });
+ 
+
+    </script>
+</body>
+</html>
